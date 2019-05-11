@@ -16,6 +16,7 @@
 
 html {
   cursor:url('custom.png'), wait;
+
 }
 
  @font-face {
@@ -32,13 +33,12 @@ body {
   background: linear-gradient(to right, #2B8ABA, #FFFFFF);
   color: #FFFFFF;
   font-family: 'Caviar Dreams', sans-serif;
+  text-align: center;
 }
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 20px;
+  padding-bottom: 20px;
+  padding-top: 50px;
   font-size: 4em;
   font-style: bold;
 }
@@ -58,46 +58,67 @@ header {
   z-index: -1;
 }
 
-nav ul {
+
+.navbar-text {
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
 }
 
-nav ul li {
-  display: flex;
-  list-style: none;
+.navbar-text a {
+  padding-top: 10px;
 }
 
+.logged-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  padding: 10px;
+  padding-bottom: 20px;
+}
 
-nav a {
+.register-form {
+  text-align: center;
+}
+
+.register-form form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+a {
   text-decoration: none;
   color: #FFFFFF;
 }
 
-nav ul li a:hover {
+a:hover {
   text-decoration: underline;
 }
 
-nav .load-content {
+.load-content {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin-top: 2.5%;
 }
 
-nav .load-content a {
+.load-content a {
   background: rgba(141, 153, 160, 0.3);
   border-radius: 10px;
   box-shadow: 2px 5px rgba(75, 81, 85, 0.3);
   display: flex;
-  padding: 3%;
+  padding: 20px;
   font-size: 2.5em;
   font-weight: 200;
   z-index: 1;
 }
 
-nav .load-content a:hover {
+.load-content a:hover {
   background: rgba(105, 114, 119, 0.3);
   box-shadow: 2px 5px rgba(50, 54, 57, 0.3);
   text-decoration: none;
