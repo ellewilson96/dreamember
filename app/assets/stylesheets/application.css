@@ -13,3 +13,40 @@
  *= require_tree .
  *= require_self
  */
+
+ @font-face {
+	font-family: 'Caviar Dreams';
+	src: url('fonts/CaviarDreams.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: rgb(43,138,186);
+  background: linear-gradient(to right, #2B8ABA, #FFFFFF);
+  color: #FFFFFF;
+  font-family: 'Caviar Dreams', sans-serif;
+}
+
+
+.cloud-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cloud-background img {
+  position: fixed;
+  bottom: -50%;
+  max-width: 120%;
+  height: auto;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .cloud-background img {
+    display: hidden;
+  }
+}
