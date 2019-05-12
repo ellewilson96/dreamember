@@ -1,14 +1,16 @@
-<div class="title">jot it down!</div>
-<div class="review_form">
+
+<div class="post-form">
 
   <%= form_for @post do |f| %>
 
-    <%= f.label :title %>:
-    <%= f.text_field :title %><br>
+    title:
+    <%= f.text_field :title %>
 
-    <%= f.label :body %>:
-    <%= f.text_area :body %><br>
+    body:
+    <%= f.text_area :body %>
 
+    <div class="submit">
     <%= f.submit %>
+    </div>
   <% end %>
 </div>
