@@ -1,3 +1,36 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.edit_user {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 35%;
+  background: rgba(234, 241, 252, 0.3);
+  border-radius: 10px;
+  box-shadow: 2px 5px rgba(75, 81, 85, 0.3);
+}
+
+
+
+.field {
+  width: 15rem;
+  padding: 6px;
+  overflow: auto;
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  color: #FFFFFF;
+}
+
+
+.error-message ul li {
+  list-style: none;
+  color: #b51515;
+}

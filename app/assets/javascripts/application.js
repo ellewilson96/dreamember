@@ -14,16 +14,3 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
-window.onscroll = function() {smoothScroll()};
-
-const header = document.getElementById("header");
-const sticky = header.offsetTop;
-
-function smoothScroll() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky")
-  }
-}
