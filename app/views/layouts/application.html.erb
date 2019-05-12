@@ -10,26 +10,20 @@
   </head>
 
   <body>
-    <header id="header">
-      DREAMEMBER
-    </header>
     <div class="cloud-background">
       <%= image_tag('/assets/header.png') %>
     </div>
 
     <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
+      <div class="alert alert-success"><%= notice %></div>
     <% end %>
     <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
+      <div class="alert alert-danger"><%= alert %></div>
     <% end %>
 
     <div class="register-form">
     <div class="navbar-text pull-right">
       <% if user_signed_in? %>
-        <div class="logged-in">
-          logged in as <%= current_user.email %>
-        </div>
         <%= link_to 'edit profile', edit_user_registration_path, :class => 'navbar-link' %>
         <%= link_to "logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %><br>
       <% else %>
@@ -37,10 +31,19 @@
         <%= link_to "log in", new_user_session_path, :class => 'navbar-link'  %>
       <% end %>
     </div>
+
+    <header id="header">
+      <div class="header-link">
+      <%= link_to 'DREAMEMBER', root_path %>
+      </div>
+    </header>
+    <% if user_signed_in? %>
+    <div class="logged-in">
+      logged in as <%= current_user.email %>
     </div>
-
-
-
+    <% else %>
+    <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

@@ -14,3 +14,18 @@
   display: inline-block;
   list-style: none;
 }
+
+
+.subheader {
+  transition: 0.4s;
+}
+
+.subheader:hover {
+  transform: scale(1.5);
+}
+
+
+.subheader a:hover {
+  color: #0b1fa0;
+  text-decoration: none;
+}

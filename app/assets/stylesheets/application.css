@@ -37,11 +37,31 @@ body {
 }
 
 header {
-  padding-bottom: 20px;
-  padding-top: 50px;
+  padding-bottom: 5px;
+  padding-top: 25px;
   font-size: 4em;
   font-style: bold;
   z-index: 1;
+}
+
+h1 {
+  padding: 0;
+}
+
+.alert {
+  padding-top: 10px;
+}
+
+.header-link {
+  transition: transform .4s;
+}
+
+.header-link a:hover {
+  text-decoration: none;
+}
+
+.header-link:hover {
+  transform: scale(1.25);
 }
 
 .sticky {
@@ -71,23 +91,28 @@ header {
 
 
 .navbar-text {
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
-.navbar-text a {
-  padding-top: 10px;
+.navbar-link {
+  padding-top: 25px;
+  margin-right: 25px;
+  opacity: 0.5;
 }
+
+.navbar-link:last-child {
+  margin-right: 0px;
+}
+
 
 .logged-in {
-  position: fixed;
-  top: 0;
-  left: 0;
+  padding-top: 0;
   opacity: 0.5;
-  padding: 10px;
   padding-bottom: 20px;
 }
 
