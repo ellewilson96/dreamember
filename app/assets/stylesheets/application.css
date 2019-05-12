@@ -16,7 +16,7 @@
 
 html {
   cursor:url('custom.png'), wait;
-
+  scroll-behavior: smooth;
 }
 
  @font-face {
@@ -41,6 +41,17 @@ header {
   padding-top: 50px;
   font-size: 4em;
   font-style: bold;
+  z-index: 1;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + body {
+  padding-top: 102px;
 }
 
 
@@ -105,10 +116,15 @@ a:hover {
   align-items: center;
   justify-content: space-evenly;
   margin-top: 2.5%;
+  transition: transform .4s;
+}
+
+.load-content:hover {
+  transform: scale(1.25);
 }
 
 .load-content a {
-  background: rgba(141, 153, 160, 0.3);
+  background: rgba(234, 241, 252, 0.3);
   border-radius: 10px;
   box-shadow: 2px 5px rgba(75, 81, 85, 0.3);
   display: flex;
@@ -119,7 +135,7 @@ a:hover {
 }
 
 .load-content a:hover {
-  background: rgba(105, 114, 119, 0.3);
+  background: rgba(182, 195, 216, 0.3);
   box-shadow: 2px 5px rgba(50, 54, 57, 0.3);
   text-decoration: none;
 }
