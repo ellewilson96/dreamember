@@ -8,13 +8,26 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  color: #000000;
 }
 
 .post-container {
-  display: inline-block;
-  list-style: none;
+  display: inline-flex;
+  position: relative;
 }
 
+.post-preview {
+   display: inline-block;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%,-50%);
+  }
+
+.post-preview a {
+  font-size: 0.7em;
+  color: #000000;
+}
 
 .subheader {
   transition: 0.4s;
@@ -66,4 +79,45 @@ textarea {
 
 .submit a {
   max-width: 40%;
+}
+
+.dream-container {
+  color: #000000;
+  display: inline-flex;
+  position: relative;
+}
+
+.dream-title {
+  font-weight: bolder;
+  text-transform: uppercase;
+  padding: 7%;
+  padding-bottom: 1.5%;
+}
+
+.dream-date {
+  padding-bottom: 2.5%;
+  font-size: 0.5em;
+}
+
+.dream-content  {
+  display: inline-block;
+  position: absolute;
+  left: 44%;
+  top: 44%;
+  transform: translate(-50%,-50%);
+  overflow: scroll;
+  max-height: 50%;
+}
+
+.dream-content-full {
+
+}
+
+.author {
+  padding: 5%;
+  font-size: 0.7em;
+}
+
+.author a {
+  color: #000000;
 }

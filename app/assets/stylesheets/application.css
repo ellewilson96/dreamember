@@ -32,6 +32,7 @@ body {
   background: rgb(43,138,186);
   background: linear-gradient(to right, #2B8ABA, #FFFFFF);
   color: #FFFFFF;
+  text-transform: lowercase;
   font-family: 'Caviar Dreams', sans-serif;
   text-align: center;
 }

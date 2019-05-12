@@ -1,6 +1,18 @@
-<div class="title"><%= @post.title %></div>
-     written by <%= @post.user.email %>
+<div class="dream-container">
+  <%= image_tag('/assets/cc4.png') %>
+  <div class="dream-content">
+    <%= @post.title %>
+    <div class="dream-date">
+      <%= @post.created_at.strftime("%b %e, %Y at %l:%M:%S%P") %>
+      </div>
+  <div class="dream-content-full">
+    <%= @post.body %>
+    </div>
+  <div class="author">
+    <%= @post.user.email %> |
+    <%= link_to "#{@post.comments.count} comments", post_comments_path(@post) %>
+    </div>
+  <div class="comments-container">
+    </div>
+    </div>
 </div>
- <div class="post-body">
-     <p><%= @post.body %></p>
- </div>
