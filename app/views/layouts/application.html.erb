@@ -2,13 +2,14 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Dreamember</title>
+    <title>dreamember</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
   <body>
@@ -50,4 +51,13 @@
     <%= yield %>
   </body>
 
+  <footer>
+    <div class="container">
+			<div class="social-links">
+				<a href="https://www.linkedin.com/in/eleanormwilson/"><span class="fa fa-linkedin"></span></a>
+				<a href="https://www.instagram.com/elle_wilson/"><span class="fa fa-instagram"></span></a>
+				<a href="https://www.github.com/ellewilson96/"><span class="fa fa-github"></span></a>
+			</div>
+    </div>
+  </footer>
 </html>
