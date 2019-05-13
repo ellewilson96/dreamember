@@ -207,7 +207,9 @@ footer {
 
 /* media queries */
 
-@media (max-width: 520px) {
+@media (max-width: 480px) {
+}
+
   .cloud-background img {
     display: none;
   }
