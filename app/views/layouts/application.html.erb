@@ -40,8 +40,6 @@
     </div>
 </div>
 
-
-
     <% if user_signed_in? %>
       <div class="logged-in">
         logged in as <%= current_user.email %>
@@ -54,7 +52,7 @@
   <footer>
 			<div class="footer-links">
         <ul>
-          <li>  <%= link_to "home", posts_path %><br>
+          <li>  <%= link_to "home", root_path %><br>
           <li>  <%= link_to "about", posts_path %><br>
           <li>  <%= link_to "contact", posts_path %><br>
         </ul>
