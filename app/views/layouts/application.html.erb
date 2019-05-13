@@ -17,6 +17,10 @@
       <%= image_tag('/assets/header.png') %>
     </div>
 
+    <div class="header">
+      <%= link_to 'DREAMEMBER', root_path %>
+    </div>
+
     <% if notice %>
       <div class="alert alert-success"><%= notice %></div>
     <% end %>
@@ -34,30 +38,27 @@
         <%= link_to "log in", new_user_session_path, :class => 'navbar-link'  %>
       <% end %>
     </div>
+</div>
 
-    <header id="header">
-      <div class="header-link">
-      <%= link_to 'DREAMEMBER', root_path %>
-      </div>
-    </header>
+
+
     <% if user_signed_in? %>
-    <div class="logged-in">
-      logged in as <%= current_user.email %>
-    </div>
+      <div class="logged-in">
+        logged in as <%= current_user.email %>
+      </div>
     <% else %>
-    <% end %>
-    </div>
+  <% end %>
 
     <%= yield %>
-  </body>
 
   <footer>
-    <div class="container">
-			<div class="social-links">
-				<a href="https://www.linkedin.com/in/eleanormwilson/"><span class="fa fa-linkedin"></span></a>
-				<a href="https://www.instagram.com/elle_wilson/"><span class="fa fa-instagram"></span></a>
-				<a href="https://www.github.com/ellewilson96/"><span class="fa fa-github"></span></a>
-			</div>
-    </div>
+			<div class="footer-links">
+        <ul>
+          <li>  <%= link_to "home", posts_path %><br>
+          <li>  <%= link_to "about", posts_path %><br>
+          <li>  <%= link_to "contact", posts_path %><br>
+        </ul>
+    	</div>
   </footer>
+  </body>
 </html>
