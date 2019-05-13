@@ -160,4 +160,13 @@ a:hover {
   .cloud-background img {
     display: none;
   }
+
+  body {
+    width: 100%;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
 }
