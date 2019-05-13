@@ -3,56 +3,57 @@
   <%= link_to 'add yours', new_post_path %>
   </div>
   <div class="post-containers">
-    <% if @posts != nil %>
+    <% if @posts.size > 0 %>
         <div class="post-container">
           <%= image_tag('/assets/cc1.png') %>
             <div class="post-preview">
-            <%= @posts[@posts.size-1].title %><br>
-            <%= link_to 'read more', post_path(@posts[@posts.size-1]) %>
+            <%= @posts[-1].title %><br>
+            <%= link_to 'read more', post_path(@posts[-1]) %>
             </div>
           </div>
         <div class="post-container">
           <%= image_tag('/assets/cc2.png') %>
             <div class="post-preview">
-              <%= @posts[@posts.size-2].title %><br>
-              <%= link_to 'read more', post_path(@posts[@posts.size-2]) %>
+              <%= @posts[-2].title %><br>
+              <%= link_to 'read more', post_path(@posts[-2]) %>
             </div>
           </div>
         <div class="post-container">
           <%= image_tag('/assets/cc3.png') %>
             <div class="post-preview">
-              <%= @posts[@posts.size-3].title %><br>
-              <%= link_to 'read more', post_path(@posts[@posts.size-3]) %>
+              <%= @posts[-3].title %><br>
+              <%= link_to 'read more', post_path(@posts[-3]) %>
             </div>
           </div>
         <div class="post-container">
           <%= image_tag('/assets/cc4.png') %>
             <div class="post-preview">
-              <%= @posts[@posts.size-4].title %><br>
-              <%= link_to 'read more', post_path(@posts[@posts.size-4]) %>
+              <%= @posts[-4].title %><br>
+              <%= link_to 'read more', post_path(@posts[-4]) %>
             </div>
           </div>
         <div class="post-container">
           <%= image_tag('/assets/cc5.png') %>
             <div class="post-preview">
-              <%= @posts[@posts.size-5].title %><br>
-              <%= link_to 'read more', post_path(@posts[@posts.size-5]) %>
+              <%= @posts[-5].title %><br>
+              <%= link_to 'read more', post_path(@posts[-5]) %>
             </div>
           </div>
         <div class="post-container">
           <%= image_tag('/assets/cc6.png') %>
             <div class="post-preview">
-              <%= @posts[@posts.size-6].title %><br>
-              <%= link_to 'read more', post_path(@posts[@posts.size-6]) %>
+              <%= @posts[-6].title %><br>
+              <%= link_to 'read more', post_path(@posts[-6]) %>
             </div>
           </div>
-          <% else %>
           <div class="post-container">
             <%= image_tag('/assets/cc6.png') %>
               <div class="post-preview">
-                <%= @posts[@posts.size-7].title %><br>
-                <%= link_to 'read more', post_path(@posts[@posts.size-7]) %>
+                <%= @posts[-7].title %><br>
+                <%= link_to 'read more', post_path(@posts[-7]) %>
               </div>
             </div>
+          <% else %>
+        test
     <% end %>
     </div>
