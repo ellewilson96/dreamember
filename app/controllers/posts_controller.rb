@@ -6,7 +6,7 @@ class PostsController < ApplicationController
  end
 
   def index
-    @posts = current_user.posts
+    @posts = Post.all
     respond_to do |f|
      f.html
      f.json {render json: @posts}

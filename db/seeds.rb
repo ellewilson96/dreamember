@@ -9,7 +9,7 @@ User.create(
         email: "example@gmail.com",
         password: "12345678"
     )
-    
+
 posts = Post.create([
   { title: 'a sailor went to sea',
     body: "A sailor went to sea, sea, sea
@@ -57,4 +57,17 @@ posts = Post.create([
     And Incy Wincy spider
     climbed up the spout again.',
     user_id: User.first.id },
+    { title: 'hot cross buns',
+      body: 'Hot cross buns,
+        Hot cross buns,
+        One a penny,
+        Two a penny,
+        Hot cross buns.
+
+        If you have no daughters,
+        If you have no sons,
+        One a penny,
+        Two a penny,
+        Hot cross buns.',
+      user_id: User.first.id },
   ])
