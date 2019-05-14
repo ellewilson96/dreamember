@@ -211,7 +211,19 @@ footer {
 /* media queries */
 
 @media (max-width: 750px) {
-
+  .post-containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
+    max-width: 100%;
+    height: auto;
+    color: #000000;
+    z-index: 1;
+  }
   .cloud-background img {
     display: none;
   }
