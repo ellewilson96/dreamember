@@ -9,12 +9,12 @@
   align-items: center;
   position: absolute;
   left: 50%;
-  transform: translate(-50%,20%);
-  overflow: scroll;
-  width: 100%;
-  height: auto;
+  transform: translate(-50%,10%);
+  max-height: 63%;
+  width: auto;
   color: #000000;
   z-index: 1;
+  overflow: scroll;
 }
 
 .post-container {

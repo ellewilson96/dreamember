@@ -4,55 +4,15 @@
   </div>
   <div class="post-containers">
     <% if @posts.size > 0 %>
+      <% @posts.each do |post| %>
         <div class="post-container">
-          <%= image_tag('/assets/cc1.png') %>
+          <%= image_tag('/assets/cc'+(Random.rand(1 .. 6).to_s)+'.png') %>
             <div class="post-preview">
-            <%= @posts[-1].title %><br>
-            <%= link_to 'read more', post_path(@posts[-1]) %>
+            <%= post.title %><br>
+            <%= link_to 'read more', post_path(post.id) %>
             </div>
           </div>
-        <div class="post-container">
-          <%= image_tag('/assets/cc2.png') %>
-            <div class="post-preview">
-              <%= @posts[-2].title %><br>
-              <%= link_to 'read more', post_path(@posts[-2]) %>
-            </div>
-          </div>
-        <div class="post-container">
-          <%= image_tag('/assets/cc3.png') %>
-            <div class="post-preview">
-              <%= @posts[-3].title %><br>
-              <%= link_to 'read more', post_path(@posts[-3]) %>
-            </div>
-          </div>
-        <div class="post-container">
-          <%= image_tag('/assets/cc4.png') %>
-            <div class="post-preview">
-              <%= @posts[-4].title %><br>
-              <%= link_to 'read more', post_path(@posts[-4]) %>
-            </div>
-          </div>
-        <div class="post-container">
-          <%= image_tag('/assets/cc5.png') %>
-            <div class="post-preview">
-              <%= @posts[-5].title %><br>
-              <%= link_to 'read more', post_path(@posts[-5]) %>
-            </div>
-          </div>
-        <div class="post-container">
-          <%= image_tag('/assets/cc6.png') %>
-            <div class="post-preview">
-              <%= @posts[-6].title %><br>
-              <%= link_to 'read more', post_path(@posts[-6]) %>
-            </div>
-          </div>
-          <div class="post-container">
-            <%= image_tag('/assets/cc6.png') %>
-              <div class="post-preview">
-                <%= @posts[-7].title %><br>
-                <%= link_to 'read more', post_path(@posts[-7]) %>
-              </div>
-            </div>
+          <% end %>
           <% else %>
     <% end %>
-    </div>
+  </div>

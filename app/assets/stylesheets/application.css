@@ -29,6 +29,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  max-width: 100%;
   background: rgb(43,138,186);
   background: linear-gradient(to right, #2B8ABA, #FFFFFF);
   color: #FFFFFF;
@@ -39,7 +40,7 @@ body {
 
 .header {
   position: relative;
-  width: 100%;
+  max-width: 100%;
   padding-bottom: 5px;
   padding-top: 5px;
   font-size: 4em;
@@ -178,6 +179,7 @@ footer {
   bottom: 0;
   z-index: 1;
   width: 100%;
+  background: rgba(182, 195, 216, 0.3);
 
 }
 
@@ -211,7 +213,7 @@ footer {
   body {
     margin: 0;
     padding: 0;
-
+    max-width: 100%;
   }
 
   .cloud-background img {
