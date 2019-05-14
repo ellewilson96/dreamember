@@ -19,6 +19,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
  @font-face {
 	font-family: 'Caviar Dreams';
 	src: url('fonts/CaviarDreams.ttf');
@@ -210,11 +211,6 @@ footer {
 /* media queries */
 
 @media (max-width: 750px) {
-  body {
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-  }
 
   .cloud-background img {
     display: none;

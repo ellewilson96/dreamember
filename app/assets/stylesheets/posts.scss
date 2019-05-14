@@ -5,11 +5,11 @@
 .post-containers {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: absolute;
   left: 50%;
-  transform: translate(-50%,10%);
+  transform: translate(-50%,0%);
   max-height: 63%;
   width: auto;
   color: #000000;
@@ -116,10 +116,6 @@ textarea {
   max-height: 50%;
 }
 
-.dream-content-full {
-
-}
-
 .author {
   padding: 5%;
   font-size: 0.7em;
@@ -127,4 +123,11 @@ textarea {
 
 .author a {
   color: #000000;
+}
+
+@media (max-width: 500px) {
+  .post-containers {
+    max-height: 100%;
+    -webkit-overflow-scrolling: touch;
+  }
 }
