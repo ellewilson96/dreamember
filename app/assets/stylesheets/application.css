@@ -14,9 +14,13 @@
  *= require_self
  */
 
+
 html {
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  height: 100%;
   cursor:url('custom.png'), wait;
-  scroll-behavior: smooth;
 }
 
 
@@ -28,9 +32,6 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
   background: rgb(43,138,186);
   background: linear-gradient(to right, #2B8ABA, #FFFFFF);
   color: #FFFFFF;
@@ -211,6 +212,9 @@ footer {
 /* media queries */
 
 @media (max-width: 750px) {
+  body {
+
+  }
   .post-containers {
     display: flex;
     flex-direction: column;
@@ -223,6 +227,7 @@ footer {
     height: auto;
     color: #000000;
     z-index: 1;
+    overflow: scroll;
   }
   .cloud-background img {
     display: none;
