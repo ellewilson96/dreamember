@@ -17,7 +17,7 @@ def show
    respond_to do |f|
    f.html
    f.json {render json: @post, layout: false}
-end
+ end
 end
 
  def create

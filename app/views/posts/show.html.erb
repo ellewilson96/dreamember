@@ -1,5 +1,6 @@
-<div class="dream-container">
-  <%= image_tag('/assets/cc4.png') %>
+<div class="post-containers">
+  <div class="dream-container">
+  <%= image_tag('/assets/cc'+(Random.rand(1 .. 6).to_s)+'.png') %>
   <div class="dream-content">
     <%= @post.title %>
     <div class="dream-date">
@@ -15,4 +16,5 @@
   <div class="comments-container">
     </div>
     </div>
+</div>
 </div>
