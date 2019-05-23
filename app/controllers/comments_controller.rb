@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :set_post
 
   def index
    respond_to do |f|
@@ -18,9 +19,11 @@ class CommentsController < ApplicationController
  end
 
  def show
-   respond_to do |f|
-   f.html
-   f.json {render json: @comment, layout: false}
+  @comments = @post.comments
+  @comment = @post.comments.build
+  respond_to do |f|
+  f.html
+  f.json {render json: @comment, layout: false}
   end
  end
 

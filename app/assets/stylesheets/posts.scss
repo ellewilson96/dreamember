@@ -89,11 +89,13 @@ textarea {
 }
 
 .dream-container {
-  color: #000000;
+  color: #FFFFFF;
   display: inline-flex;
   position: relative;
-  width: 100%;
+  width: 50%;
   height: auto;
+  border: 1px solid #FFFFFF;
+  background: rgba(132, 192, 224, 0.6);
 }
 
 .dream-title {
@@ -109,22 +111,14 @@ textarea {
 }
 
 .dream-content  {
-  display: inline-block;
-  position: absolute;
-  left: 46%;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  overflow: scroll;
-  max-height: 42%;
+  padding: 20px;
+ max-width: 80%;
+ margin: auto;
 }
 
 .author {
   padding: 5%;
   font-size: 0.7em;
-}
-
-.author a {
-  color: #000000;
 }
 
 @media (max-width: 500px) {

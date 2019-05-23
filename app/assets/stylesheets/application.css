@@ -114,7 +114,6 @@ a:hover {
 }
 
 .navbar-link {
-  padding-top: 25px;
   margin-right: 25px;
   opacity: 0.5;
 }
@@ -177,27 +176,24 @@ a:hover {
 /* footer styling */
 
 footer {
-  position: fixed;
-  bottom: 0;
-  z-index: 1;
+  z-index: -1;
   width: 100%;
-  background: rgba(182, 195, 216, 0.3);
-
 }
 
 .footer-links ul {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 .footer-links ul li {
   background: rgba(158, 201, 226, 0.6);
-  padding: 1% 5% 1% 5%;
+  padding: 1%;
   border-radius: 50px;
   list-style: none;
   transition: transform .4s;
   box-shadow: 2px 5px rgba(42, 110, 150, 0.8);
+  margin-right: 20px;
 }
 
 .footer-links ul li:hover {
