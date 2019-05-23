@@ -18,20 +18,6 @@ class CommentsController < ApplicationController
    end
  end
 
- def show
-  @comments = @post.comments
-  @comment = @post.comments.build
-  respond_to do |f|
-  f.html
-  f.json {render json: @comment, layout: false}
-  end
- end
-
-
- def destroy
-   @comment.destroy
-   redirect_to comments_path
- end
 
 private
 
@@ -42,6 +28,4 @@ private
  def comments_params
    params.require(:comment).permit(:content)
  end
-
-
 end

@@ -1,31 +1,27 @@
-  <div class="dream-container">
+<div class="dream-container">
     <div class="dream-content">
-    <%= @post.title %>
-    <div class="dream-date">
-      <%= @post.created_at.strftime("%b %e, %Y at %l:%M:%S%P") %>
+      <div class="dream-title">
+        <%= @post.title %>
+      </div>
+      <div class="author">
+        posted on <%= @post.created_at.strftime("%b %e, %Y") %>
+        <br>by <%= @post.user.email %>
       </div>
   <div class="dream-content-full">
     <%= @post.body %>
     </div>
-  <div class="author">
-    <%= @post.user.email %> |
-  <% if @post.comments.present? %>
-    <%= link_to "#{@post.comments.count} comments", post_comments_path(@post) %>
-    </div>
-     <div class="post-comments-<%=@post.id%>">
-     </div>
 
-     <% else %>
-     <%= link_to "#{@post.comments.count} comments", post_comments_path(@post) %>
-     <p>Add a New Comment</p>
-     <% end %>
+   <a href="/posts/<%=@post.id%>" class="load-comments">Show all comments</a>
+   <a href="/posts/<%=@post.id%>" class="hide-comments">Hide all comments</a>
 
+          <%= form_for(@post.comments.build, :url => post_comments_path(@post)) do |f|  %>
+          <%= f.text_area :content %>
 
-         <%= form_for(@post.comments.build, :url => post_comments_path(@post)) do |f|  %>
-         <%= f.text_area :content %>
-
-         <p><%= f.submit %></p>
+          <p><%= f.submit %></p>
          <% end %>
+
+         <div class="comments-list" id="comments-list">
+                </div>
 
    <% if current_user.id = @post.user_id %>
    <%= link_to 'Edit Post', edit_post_path(@post) %>
@@ -33,4 +29,4 @@
    <% end %> |
    <%= link_to 'Back', posts_path %>
    </div>
-</div>
+   </div>

@@ -3,14 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .post-containers {
+  padding: 5%;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%,0%);
-  max-height: 63%;
   width: auto;
   color: #000000;
   z-index: 1;
@@ -92,38 +91,75 @@ textarea {
   color: #FFFFFF;
   display: inline-flex;
   position: relative;
-  width: 50%;
+  width: 65%;
   height: auto;
   border: 1px solid #FFFFFF;
+  border-radius: 10px;
   background: rgba(132, 192, 224, 0.6);
 }
 
 .dream-title {
   font-weight: bolder;
-  text-transform: uppercase;
-  padding: 7%;
-  padding-bottom: 1.5%;
+  font-size: 2em;
+  padding: 10%;
 }
 
 .dream-date {
   padding-bottom: 2.5%;
-  font-size: 0.5em;
+  font-size: 0.75em;
 }
 
 .dream-content  {
-  padding: 20px;
+ padding: 20px;
  max-width: 80%;
  margin: auto;
 }
 
-.author {
+.dream-content-full {
   padding: 5%;
+  font-size: 1.5em;
+  background: rgba(132, 192, 224, 0.8);
+  border-radius: 15px;
+  overflow: scroll;
+}
+
+.comment-container {
+  padding-top: 5%;
+}
+
+.comment-container form {
+  padding: 0;
+}
+
+.author {
+  padding-bottom: 5%;
   font-size: 0.7em;
 }
 
-@media (max-width: 500px) {
+.comment-container a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: transform .4s;
+}
+
+.comment-container a:hover {
+    text-decoration: none;
+    transform: scale(1.25);
+  }
+
+@media (max-width: 600px) {
   .post-containers {
-    max-height: 100%;
-    -webkit-overflow-scrolling: touch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0%);
+    max-height: 63%;
+    width: auto;
+    color: #000000;
+    z-index: 1;
+    overflow: scroll;
   }
 }
