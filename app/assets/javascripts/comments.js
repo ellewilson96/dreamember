@@ -5,9 +5,7 @@ $(function(){
   class Comment {
     constructor(i) {
     this.id = i.id;
-    this.user = i.user;
     this.content = i.content;
-    this.post = i.post;
     this.post_id = i.post_id;
   }
 }
@@ -63,11 +61,11 @@ function createComments(e) {
 
 function attachEventListeners() {
 
-    // $('a.load-comments').on('click', getComments)
-    //
-    //   $('a.hide-comments').click(function(){
-    //     $("div.post-comments-"+id).toggle(false);
-    //   });
+    $('a.load-comments').on('click', getComments)
+
+      $('a.hide-comments').click(function(){
+        $("div.comments-list").toggle(false);
+      });
 
     $("#new-comment").on("submit", createComments)
 }

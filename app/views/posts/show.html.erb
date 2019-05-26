@@ -23,7 +23,7 @@
          <div class="comments-list" id="comments-list">
                 </div>
 
-   <% if current_user.id = @post.user_id %>
+   <% if current_user.email = @post.user.email %>
    <%= link_to 'Edit Post', edit_post_path(@post) %>
    <% else %>
    <% end %> |
